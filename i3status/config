@@ -1,0 +1,25 @@
+general {
+    colors = true
+    interval = 5
+}
+
+order += "disk /"
+order += "battery 0"
+order += "load"
+order += "tztime local"
+
+disk "/" {
+    format = "%avail"
+}
+
+battery 0 {
+    format = "%status %percentage %remaining"
+}
+
+load {
+    format = "%1min"
+}
+
+tztime local {
+    format = "%Y-%m-%d %H:%M:%S"
+}
